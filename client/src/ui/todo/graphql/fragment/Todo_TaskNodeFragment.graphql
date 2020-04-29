@@ -1,0 +1,9 @@
+fragment Todo_TaskNodeFragment on Task {
+    id
+    name
+    describe
+    deadlineAt
+    completionAt
+    createdAt
+    updatedAt
+}

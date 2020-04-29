@@ -1,0 +1,10 @@
+query TodoPageQuery(
+    $name: String
+) {
+    tasks(
+        first: 50,
+        name: $name
+    ) {
+        ...Todo_TaskConnectionFragment
+    }
+}

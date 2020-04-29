@@ -1,0 +1,9 @@
+#import "../fragment/Version_VersionNodeFragment.graphql"
+
+fragment Todo_TaskConnectionFragment on TaskConnection {
+    edges {
+        node {
+            ...Todo_TaskNodeFragment
+        }
+    }
+}

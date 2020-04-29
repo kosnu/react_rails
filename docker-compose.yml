@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
     stdin_open: true
     tty: true
-    command: "npm run start"
+    command: "yarn run start"
     volumes:
       - ./client:/app/client
     ports:
