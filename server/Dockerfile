@@ -16,3 +16,5 @@ COPY Gemfile /app/server/Gemfile
 COPY Gemfile.lock /app/server/Gemfile.lock
 RUN bundle install -j4
 COPY . /app/server
+
+CMD ["./entrypoint.sh"]

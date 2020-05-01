@@ -4,7 +4,6 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    command: "bundle exec rails server -p 3014 -b '0.0.0.0'"
     volumes:
       - ./server:/app/server
     ports:
@@ -33,7 +32,7 @@ services:
     volumes:
       - ./client:/app/client
     ports:
-      - "3000:3000"
+      - "3814:3814"
 volumes:
   mysql-data:
     driver: local
