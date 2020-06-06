@@ -1,0 +1,5 @@
+mutation DeleteTaskMutation($ids: [ID!]!){
+    deleteTasks(input: { ids: $ids }) {
+        errors
+    }
+}

@@ -8,39 +8,39 @@
 // ====================================================
 
 export interface TodoPageQuery_tasks_edges_node {
-  __typename: "Task";
-  id: string;
-  name: string;
-  describe: string;
-  deadlineAt: string;
-  completionAt: string;
-  createdAt: string;
-  updatedAt: string;
+  __typename: "Task"
+  id: string
+  name: string
+  describe: string
+  deadlineAt: string | null
+  completionAt: string | null
+  createdAt: string
+  updatedAt: string
 }
 
 export interface TodoPageQuery_tasks_edges {
-  __typename: "TaskEdge";
+  __typename: "TaskEdge"
   /**
    * The item at the end of the edge.
    */
-  node: TodoPageQuery_tasks_edges_node | null;
+  node: TodoPageQuery_tasks_edges_node | null
 }
 
 export interface TodoPageQuery_tasks {
-  __typename: "TaskConnection";
+  __typename: "TaskConnection"
   /**
    * A list of edges.
    */
-  edges: (TodoPageQuery_tasks_edges | null)[] | null;
+  edges: (TodoPageQuery_tasks_edges | null)[] | null
 }
 
 export interface TodoPageQuery {
   /**
-   * タスク
+   * Task Query
    */
-  tasks: TodoPageQuery_tasks | null;
+  tasks: TodoPageQuery_tasks | null
 }
 
 export interface TodoPageQueryVariables {
-  name?: string | null;
+  name?: string | null
 }

@@ -3,7 +3,7 @@
 module Queries
   class TasksQuery < ::Queries::BaseQuery
     type Types::QueryType::TaskType.connection_type, null: true
-    description 'タスク'
+    description 'Task Query'
 
     argument :name, String, required: false, default_value: nil
 

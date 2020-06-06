@@ -3,12 +3,10 @@ import ApolloClient from "apollo-client"
 import { ApolloLink } from "apollo-link"
 import { onError } from "apollo-link-error"
 import { createHttpLink } from "apollo-link-http"
-import { resolvers } from "./resolver"
-import { initialState } from "./state"
 import fetch from "unfetch"
 
 const cache = new InMemoryCache({
-  dataIdFromObject: (object) =>
+  dataIdFromObject: object =>
     object.id ? object.id : defaultDataIdFromObject(object),
 })
 
@@ -41,7 +39,7 @@ const link = ApolloLink.from([errorLink, httpLink])
 export const apolloClient = new ApolloClient({
   cache,
   link,
-  resolvers: resolvers,
+  // resolvers: resolvers,
 })
 
-cache.writeData({ data: initialState })
+// cache.writeData({ data: initialState })

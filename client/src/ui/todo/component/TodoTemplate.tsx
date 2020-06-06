@@ -1,15 +1,16 @@
 import * as React from "react"
+import { Header } from "./Header"
+import { TaskListContainer } from "../container/TaskListContainer"
+import { AddTaskContainer } from "../container/AddTaskContainer"
 
-type Props = {
-  data: any
-}
+type Props = {}
 
 export const TodoTemplate: React.FC<Props> = React.memo(
-  ({
-     ...props
-   }: Props) => (
+  ({ ...props }: Props) => (
     <div className="App" {...props}>
-      <p>{"hogehogehoge"}</p>
-      <div>data</div>
-    </div>  )
+      <Header />
+      <AddTaskContainer />
+      <TaskListContainer />
+    </div>
+  ),
 )

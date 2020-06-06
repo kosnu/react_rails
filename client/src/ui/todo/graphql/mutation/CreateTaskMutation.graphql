@@ -1,0 +1,14 @@
+mutation CreateTaskMutation($name: String!, $describe: String!, $deadlineAt: String!, $completionAt: String!){
+    createTask(input: {name: $name, describe: $describe, deadlineAt: $deadlineAt, completionAt: $completionAt}) {
+        task {
+            id
+            name
+            describe
+            deadlineAt
+            completionAt
+            createdAt
+            updatedAt
+        }
+        errors
+    }
+}

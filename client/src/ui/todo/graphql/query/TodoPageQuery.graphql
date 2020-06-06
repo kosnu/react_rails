@@ -2,9 +2,18 @@ query TodoPageQuery(
     $name: String
 ) {
     tasks(
-        first: 50,
         name: $name
     ) {
-        ...Todo_TaskConnectionFragment
+        edges {
+            node {
+                id
+                name
+                describe
+                deadlineAt
+                completionAt
+                createdAt
+                updatedAt
+            }
+        }
     }
 }
